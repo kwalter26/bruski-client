@@ -3,7 +3,6 @@ package com.fusionkoding.bruskiclient.web.client;
 import java.net.URI;
 import java.util.UUID;
 
-import com.fusionkoding.bruskiclient.web.model.BeerDto;
 import com.fusionkoding.bruskiclient.web.model.CustomerDto;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
