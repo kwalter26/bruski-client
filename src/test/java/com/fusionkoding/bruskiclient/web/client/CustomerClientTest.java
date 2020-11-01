@@ -5,7 +5,6 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import java.net.URI;
 import java.util.UUID;
 
-import com.fusionkoding.bruskiclient.web.model.BeerDto;
 import com.fusionkoding.bruskiclient.web.model.CustomerDto;
 
 import org.junit.jupiter.api.Test;
