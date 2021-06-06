@@ -14,7 +14,7 @@ import lombok.Setter;
 
 @Component
 @ConfigurationProperties(value = "bruski", ignoreInvalidFields = false)
-public class BreweryClient implements Client<BeerDto, UUID> {
+public class BreweryClient implements Client<BeerDto, String> {
 
     private static final String BEER_PATH_V1 = "/api/v1/beer/";
 
@@ -28,7 +28,7 @@ public class BreweryClient implements Client<BeerDto, UUID> {
     }
 
     @Override
-    public BeerDto getById(UUID id) {
+    public BeerDto getById(String id) {
         return restTemplate.getForObject(apiHost + BEER_PATH_V1 + id.toString(), BeerDto.class);
     }
 
@@ -43,12 +43,12 @@ public class BreweryClient implements Client<BeerDto, UUID> {
     }
 
     @Override
-    public void update(UUID id, BeerDto dto) {
+    public void update(String id, BeerDto dto) {
         restTemplate.put(apiHost + BEER_PATH_V1 + id.toString(), dto);
     }
 
     @Override
-    public void delete(UUID id) {
+    public void delete(String id) {
         restTemplate.delete(apiHost + BEER_PATH_V1 + id.toString());
     }
 }
